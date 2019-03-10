@@ -47,7 +47,6 @@ def Delete(T,del_item):
                 T.item = m.item
                 T.right = Delete(T.right,m.item)
     return T
- 
         
 def InOrder(T):
     # Prints items in BST in ascending order
@@ -56,7 +55,6 @@ def InOrder(T):
         print(T.item,end = ' ')
         InOrder(T.right)
         
-  
 def InOrderD(T,space):
     # Prints items and structure of BST
     if T is not None:
@@ -71,9 +69,7 @@ def SumTree(T):
         Sum = T.item
         if T.right is not None:
             Sum += SumTree(T.left)
-            
-            Sum += SumTree(T.right)
-            
+            Sum += SumTree(T.right)         
     return Sum
 
 def SmallestL(T):
@@ -84,21 +80,18 @@ def SmallestL(T):
         T = T.left
     return T   
 
- 
 def Smallest(T):
     # Returns smallest item in BST. Error if T is None
     if T.left is None:
         return T
     else:
         return Smallest(T.left)
-    
 
 def Largest(T):
     if T.right is None:
         return T
     else:
         return Largest(T.right)  
-    
 
 def Find(T,k):
     # Returns the address of k in BST, or None if k is not in the tree
@@ -109,7 +102,6 @@ def Find(T,k):
     return Find(T.left,k)     
 
 def FindDepth(T,k):
-    
     if T is None:
         return -1
     if T.item == k:
@@ -136,7 +128,6 @@ def SumAtDepth(T,d):
         Sum = 0
         if depth < d:
             depth += 1
-        
             return depth + FindDepth(T.right,d)
            
         if depth > d:
@@ -145,17 +136,12 @@ def SumAtDepth(T,d):
             
         return Sum
         
-            
-    
 def FindAndPrint(T,k):
     f = Find(T,k)
     if f is not None:
         print(f.item,'found')
     else:
         print(k,'not found')
-        
- 
-
 
 ''' #1
 ========================================================
@@ -193,6 +179,7 @@ def DisplayTree():
 ''' #2
 ========================================================
 '''  
+
 def FindIter(T,k):
     if T is None:
         return None
@@ -267,6 +254,7 @@ def ElementsAtDepth(T,k):
         ElementsAtDepth(T.left, k-1)
         ElementsAtDepth(T.right, k-1)
 '''
+
 #Code to test the functions above
 T = None
 A = [70, 50, 90, 130, 150, 40, 10, 30, 100, 180, 45, 60, 140, 42]
@@ -352,12 +340,14 @@ SA = BalanceTree(List)
 InOrderD(SA, ' ')
 print()
 
+
 print('==========================================================')
 print('4) Extract elements in a tree into a sorted list')
 List = []
 ExtractToList(T)
 print('   Extracted elements: ', List)
 print()
+
 
 print('==========================================================')
 print('5) Print elements in order by depth')
