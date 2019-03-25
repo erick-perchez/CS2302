@@ -1,7 +1,16 @@
 # Code to implement a B-tree 
 # Programmed by Olac Fuentes
 # Last modified February 28, 2019
-
+'''
+Course: CS2302
+Author: Erick Perchez
+Assignment: Lab 2
+Instructor: Dr. Fuentes
+TA: Andita Nath
+Date: 03/20/2019
+Purpose: To make, manipulate, extract from, and understand B trees and their
+         functions
+'''
 
 class BTree(object):
     # Constructor
