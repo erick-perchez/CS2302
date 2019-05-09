@@ -260,7 +260,7 @@ num_cells= maze_rows*maze_cols
 
 walls = wall_list(maze_rows,maze_cols) # Creates the walls for the maze
 M = DisjointSetForest(maze_rows*maze_cols)
-draw_maze(walls,maze_rows,maze_cols,cell_nums=True)
+draw_maze(walls,maze_rows,maze_cols,cell_nums=True
 
 '''
 ===============================================================================
@@ -347,7 +347,7 @@ print()
 ans = int(input('Your Choice:'))
 
 #sends the path to generate a path from start to end
-plot = draw_maze(walls,maze_rows,maze_cols)  
+plot = draw_maze(wlls,maze_rows,maze_cols)  
 
 start = time.time()*1000
 #1 generates path with BFS
