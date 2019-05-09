@@ -1,3 +1,13 @@
+'''
+Course: CS2302
+Author: Erick Perchez
+Assignment: Lab 7
+Instructor: Dr. Fuentes
+TA: Andita Nath
+Date: 05/06/2019
+Purpose: To modify a maze and show a path using differrent algorithms
+'''
+
 import matplotlib.pyplot as plt
 import numpy as np
 import time
@@ -240,10 +250,11 @@ def Union_Maze(M, w, m):
         temp_list.append([])  
     
     adj_list = get_adj_list(popped, temp_list)
+    print('Adj list =========',adj_list)
     return adj_list
 
 plt.close("all") 
-maze_rows = 20
+maze_rows = 15
 maze_cols = 15
 num_cells= maze_rows*maze_cols
 
@@ -261,7 +272,7 @@ print()
 
 print('There are', maze_rows*maze_cols,' cells.')
 m = int(input('How many walls do you want to remove: '))
-while m < 0 or m > 565: #max number of walls in a 15X20
+while m < 0 or m > 3000000: #max number of walls in a 15X20
     m = int(input('Invalid input, try a different number:'))
 if m > len(walls) - 1:
     print('The number of walls you want to remove exeeds the number of walls that are present.')     
