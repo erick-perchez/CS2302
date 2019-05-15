@@ -9,6 +9,16 @@ I HOPE I DONT GET A LATE PENALTY ON THAT PLEASE, AS IT WAS AN ACCIDENTAL DELETIO
 
 '''
 
+'''
+Course: CS2302
+Author: Erick Perchez
+Assignment: Lab 8
+Instructor: Dr. Fuentes
+TA: Andita Nath
+Date: 05/12/2019
+Purpose: To find similarities between two trig functions and to find
+         equal subsets of the same set.
+'''
 import random
 import numpy as np
 from mpmath import *
